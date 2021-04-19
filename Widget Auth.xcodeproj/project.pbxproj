@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8137797261BE562003D8920 /* OAAddManualViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8137796261BE562003D8920 /* OAAddManualViewModel.swift */; };
+		A81377B5261C053B003D8920 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377B4261C053B003D8920 /* ToastModifier.swift */; };
+		A81377BA261C22E8003D8920 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377B9261C22E8003D8920 /* CodeScanner.swift */; };
+		A81377BF261C231E003D8920 /* SingleOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377BE261C231E003D8920 /* SingleOTPView.swift */; };
+		A81377D0261C3743003D8920 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377CF261C3743003D8920 /* OTPViewModel.swift */; };
+		A81377D5261C3919003D8920 /* OAScanQRVie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377D4261C3919003D8920 /* OAScanQRVie.swift */; };
+		A827C63E2616676B00CEE523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
+		A827C645261669FA00CEE523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
+		A8509DC82548178200DFBF42 /* SelectOTPIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */; };
+		A859B482261601DA00684F64 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859B47D2616013800684F64 /* WidgetView.swift */; };
+		A87743882547228B00D30DFB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89932CF2546E1EB005E7553 /* WidgetKit.framework */; };
+		A87743892547228B00D30DFB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89932D12546E1EB005E7553 /* SwiftUI.framework */; };
+		A877438C2547228B00D30DFB /* OTP_Widget_Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */; };
+		A877438E2547228C00D30DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
+		A87743922547228C00D30DFB /* OTP Widget ExtnExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A877439B2547234600D30DFB /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899325E25469FD2005E7553 /* OTPModel.swift */; };
+		A87743D42547302400D30DFB /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D02547302400D30DFB /* OTPGenerator.m */; };
+		A87743D52547302400D30DFB /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D02547302400D30DFB /* OTPGenerator.m */; };
+		A87743D62547302400D30DFB /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D12547302400D30DFB /* TOTPGenerator.m */; };
+		A87743D72547302400D30DFB /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D12547302400D30DFB /* TOTPGenerator.m */; };
+		A87743D82547302400D30DFB /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D32547302400D30DFB /* MF_Base32Additions.m */; };
+		A87743D92547302400D30DFB /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A87743D32547302400D30DFB /* MF_Base32Additions.m */; };
+		A87743EB25474EF200D30DFB /* SelectOTPIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */; };
+		A8774401254751CA00D30DFB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8774400254751CA00D30DFB /* IntentHandler.swift */; };
+		A8774405254751CA00D30DFB /* OTPIntentExtn.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A87743FE254751CA00D30DFB /* OTPIntentExtn.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A87744122547524500D30DFB /* SelectOTPIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */; };
+		A87744192547552100D30DFB /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899325E25469FD2005E7553 /* OTPModel.swift */; };
+		A87744372547605400D30DFB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8774400254751CA00D30DFB /* IntentHandler.swift */; };
+		A88446F426180E7800D4AD76 /* OAListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88446F326180E7800D4AD76 /* OAListView.swift */; };
+		A88446FC26180F8700D4AD76 /* OAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88446FB26180F8700D4AD76 /* OAViewModel.swift */; };
+		A88447012618222500D4AD76 /* OAAddManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88447002618222500D4AD76 /* OAAddManualView.swift */; };
+		A899323F25469AB0005E7553 /* Widget_AuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899323E25469AB0005E7553 /* Widget_AuthApp.swift */; };
+		A899324125469AB0005E7553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899324025469AB0005E7553 /* ContentView.swift */; };
+		A899324325469AB1005E7553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324225469AB1005E7553 /* Assets.xcassets */; };
+		A899324625469AB1005E7553 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324525469AB1005E7553 /* Preview Assets.xcassets */; };
+		A899325F25469FD2005E7553 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899325E25469FD2005E7553 /* OTPModel.swift */; };
+		A899326E2546A350005E7553 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899326D2546A350005E7553 /* KeychainItemAccessibility.swift */; };
+		A89932722546A370005E7553 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89932712546A370005E7553 /* KeychainWrapper.swift */; };
+		A8A1DD69262993910064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
+		A8A1DD6D262993910064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
+		A8A1DD71262993960064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A87743902547228C00D30DFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A899323325469AB0005E7553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A87743862547228B00D30DFB;
+			remoteInfo = "OTP Widget ExtnExtension";
+		};
+		A8774403254751CA00D30DFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A899323325469AB0005E7553 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A87743FD254751CA00D30DFB;
+			remoteInfo = OTPIntentExtn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A89932E22546E1ED005E7553 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A87743922547228C00D30DFB /* OTP Widget ExtnExtension.appex in Embed App Extensions */,
+				A8774405254751CA00D30DFB /* OTPIntentExtn.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A8137796261BE562003D8920 /* OAAddManualViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAAddManualViewModel.swift; sourceTree = "<group>"; };
+		A81377B4261C053B003D8920 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		A81377B9261C22E8003D8920 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
+		A81377BE261C231E003D8920 /* SingleOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOTPView.swift; sourceTree = "<group>"; };
+		A81377CF261C3743003D8920 /* OTPViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		A81377D4261C3919003D8920 /* OAScanQRVie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAScanQRVie.swift; sourceTree = "<group>"; };
+		A8509DCC25481FF500DFBF42 /* OTPIntentExtn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPIntentExtn.entitlements; sourceTree = "<group>"; };
+		A859B47D2616013800684F64 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		A87743212547152D00D30DFB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OTP Widget ExtnExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP_Widget_Extn.swift; sourceTree = "<group>"; };
+		A877438D2547228C00D30DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A877438F2547228C00D30DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8774398254722BC00D30DFB /* OTP Widget ExtnExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTP Widget ExtnExtension.entitlements"; sourceTree = "<group>"; };
+		A87743CE2547302400D30DFB /* MF_Base32Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base32Additions.h; sourceTree = "<group>"; };
+		A87743CF2547302400D30DFB /* TOTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOTPGenerator.h; sourceTree = "<group>"; };
+		A87743D02547302400D30DFB /* OTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPGenerator.m; sourceTree = "<group>"; };
+		A87743D12547302400D30DFB /* TOTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTPGenerator.m; sourceTree = "<group>"; };
+		A87743D22547302400D30DFB /* OTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPGenerator.h; sourceTree = "<group>"; };
+		A87743D32547302400D30DFB /* MF_Base32Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base32Additions.m; sourceTree = "<group>"; };
+		A87743DC2547304600D30DFB /* WidgetAuth-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WidgetAuth-Bridging-Header.h"; sourceTree = "<group>"; };
+		A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SelectOTPIntent.intentdefinition; sourceTree = "<group>"; };
+		A87743FE254751CA00D30DFB /* OTPIntentExtn.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OTPIntentExtn.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8774400254751CA00D30DFB /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		A8774402254751CA00D30DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88446F326180E7800D4AD76 /* OAListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAListView.swift; sourceTree = "<group>"; };
+		A88446FB26180F8700D4AD76 /* OAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAViewModel.swift; sourceTree = "<group>"; };
+		A88447002618222500D4AD76 /* OAAddManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAAddManualView.swift; sourceTree = "<group>"; };
+		A899323B25469AB0005E7553 /* Widget Auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Widget Auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A899323E25469AB0005E7553 /* Widget_AuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget_AuthApp.swift; sourceTree = "<group>"; };
+		A899324025469AB0005E7553 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A899324225469AB1005E7553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A899324525469AB1005E7553 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A899324725469AB1005E7553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Widget Auth/Info.plist"; sourceTree = SOURCE_ROOT; };
+		A899325E25469FD2005E7553 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
+		A89932622546A0EA005E7553 /* Widget Auth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Widget Auth.entitlements"; path = "App/Widget Auth.entitlements"; sourceTree = "<group>"; };
+		A899326D2546A350005E7553 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		A89932712546A370005E7553 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		A89932CF2546E1EB005E7553 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A89932D12546E1EB005E7553 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A89932E52546E52E005E7553 /* OTP WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTP WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		A8A1DD64262993740064EBFC /* CounterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A87743842547228B00D30DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87743892547228B00D30DFB /* SwiftUI.framework in Frameworks */,
+				A87743882547228B00D30DFB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A87743FB254751CA00D30DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A899323825469AB0005E7553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A877438A2547228B00D30DFB /* OTP Widget Extn */ = {
+			isa = PBXGroup;
+			children = (
+				A8A1DD64262993740064EBFC /* CounterWidget.swift */,
+				A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */,
+				A877438D2547228C00D30DFB /* Assets.xcassets */,
+				A877438F2547228C00D30DFB /* Info.plist */,
+				A859B47D2616013800684F64 /* WidgetView.swift */,
+			);
+			path = "OTP Widget Extn";
+			sourceTree = "<group>";
+		};
+		A87743CB25472FF700D30DFB /* Auth_Files */ = {
+			isa = PBXGroup;
+			children = (
+				A87743DC2547304600D30DFB /* WidgetAuth-Bridging-Header.h */,
+				A87743CE2547302400D30DFB /* MF_Base32Additions.h */,
+				A87743D32547302400D30DFB /* MF_Base32Additions.m */,
+				A87743D22547302400D30DFB /* OTPGenerator.h */,
+				A87743D02547302400D30DFB /* OTPGenerator.m */,
+				A87743CF2547302400D30DFB /* TOTPGenerator.h */,
+				A87743D12547302400D30DFB /* TOTPGenerator.m */,
+			);
+			path = Auth_Files;
+			sourceTree = "<group>";
+		};
+		A87743FF254751CA00D30DFB /* OTPIntentExtn */ = {
+			isa = PBXGroup;
+			children = (
+				A8509DCC25481FF500DFBF42 /* OTPIntentExtn.entitlements */,
+				A8774400254751CA00D30DFB /* IntentHandler.swift */,
+				A8774402254751CA00D30DFB /* Info.plist */,
+			);
+			path = OTPIntentExtn;
+			sourceTree = "<group>";
+		};
+		A899323225469AB0005E7553 = {
+			isa = PBXGroup;
+			children = (
+				A8774398254722BC00D30DFB /* OTP Widget ExtnExtension.entitlements */,
+				A89932E52546E52E005E7553 /* OTP WidgetExtension.entitlements */,
+				A899323D25469AB0005E7553 /* Widget Auth */,
+				A877438A2547228B00D30DFB /* OTP Widget Extn */,
+				A87743FF254751CA00D30DFB /* OTPIntentExtn */,
+				A89932CE2546E1EB005E7553 /* Frameworks */,
+				A899323C25469AB0005E7553 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A899323C25469AB0005E7553 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A899323B25469AB0005E7553 /* Widget Auth.app */,
+				A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */,
+				A87743FE254751CA00D30DFB /* OTPIntentExtn.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A899323D25469AB0005E7553 /* Widget Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A81377B9261C22E8003D8920 /* CodeScanner.swift */,
+				A81377B4261C053B003D8920 /* ToastModifier.swift */,
+				A87743CB25472FF700D30DFB /* Auth_Files */,
+				A899324725469AB1005E7553 /* Info.plist */,
+				A89932622546A0EA005E7553 /* Widget Auth.entitlements */,
+				A89932652546A2DB005E7553 /* KeychainWrapper */,
+				A899325D25469FAB005E7553 /* App */,
+				A899325C25469FA4005E7553 /* View */,
+				A899325B25469F9D005E7553 /* Model */,
+				A899325A25469F95005E7553 /* ViewModel */,
+				A899324425469AB1005E7553 /* Preview Content */,
+				A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */,
+			);
+			path = "Widget Auth";
+			sourceTree = "<group>";
+		};
+		A899324425469AB1005E7553 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A899324525469AB1005E7553 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A899325A25469F95005E7553 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A81377CF261C3743003D8920 /* OTPViewModel.swift */,
+				A88446FB26180F8700D4AD76 /* OAViewModel.swift */,
+				A8137796261BE562003D8920 /* OAAddManualViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A899325B25469F9D005E7553 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A899325E25469FD2005E7553 /* OTPModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A899325C25469FA4005E7553 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A899324025469AB0005E7553 /* ContentView.swift */,
+				A88446F326180E7800D4AD76 /* OAListView.swift */,
+				A88447002618222500D4AD76 /* OAAddManualView.swift */,
+				A81377BE261C231E003D8920 /* SingleOTPView.swift */,
+				A81377D4261C3919003D8920 /* OAScanQRVie.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A899325D25469FAB005E7553 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A899323E25469AB0005E7553 /* Widget_AuthApp.swift */,
+				A899324225469AB1005E7553 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A89932652546A2DB005E7553 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				A899326D2546A350005E7553 /* KeychainItemAccessibility.swift */,
+				A89932712546A370005E7553 /* KeychainWrapper.swift */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		A89932CE2546E1EB005E7553 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A89932CF2546E1EB005E7553 /* WidgetKit.framework */,
+				A89932D12546E1EB005E7553 /* SwiftUI.framework */,
+				A87743212547152D00D30DFB /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A87743862547228B00D30DFB /* OTP Widget ExtnExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A87743932547228C00D30DFB /* Build configuration list for PBXNativeTarget "OTP Widget ExtnExtension" */;
+			buildPhases = (
+				A87743832547228B00D30DFB /* Sources */,
+				A87743842547228B00D30DFB /* Frameworks */,
+				A87743852547228B00D30DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OTP Widget ExtnExtension";
+			productName = "OTP Widget ExtnExtension";
+			productReference = A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A87743FD254751CA00D30DFB /* OTPIntentExtn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8774406254751CA00D30DFB /* Build configuration list for PBXNativeTarget "OTPIntentExtn" */;
+			buildPhases = (
+				A87743FA254751CA00D30DFB /* Sources */,
+				A87743FB254751CA00D30DFB /* Frameworks */,
+				A87743FC254751CA00D30DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPIntentExtn;
+			productName = OTPIntentExtn;
+			productReference = A87743FE254751CA00D30DFB /* OTPIntentExtn.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A899323A25469AB0005E7553 /* Widget Auth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A899324A25469AB1005E7553 /* Build configuration list for PBXNativeTarget "Widget Auth" */;
+			buildPhases = (
+				A899323725469AB0005E7553 /* Sources */,
+				A899323825469AB0005E7553 /* Frameworks */,
+				A899323925469AB0005E7553 /* Resources */,
+				A89932E22546E1ED005E7553 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A87743912547228C00D30DFB /* PBXTargetDependency */,
+				A8774404254751CA00D30DFB /* PBXTargetDependency */,
+			);
+			name = "Widget Auth";
+			productName = "Widget Auth";
+			productReference = A899323B25469AB0005E7553 /* Widget Auth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A899323325469AB0005E7553 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					A87743862547228B00D30DFB = {
+						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
+					};
+					A87743FD254751CA00D30DFB = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					A899323A25469AB0005E7553 = {
+						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
+					};
+				};
+			};
+			buildConfigurationList = A899323625469AB0005E7553 /* Build configuration list for PBXProject "Widget Auth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A899323225469AB0005E7553;
+			productRefGroup = A899323C25469AB0005E7553 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A899323A25469AB0005E7553 /* Widget Auth */,
+				A87743862547228B00D30DFB /* OTP Widget ExtnExtension */,
+				A87743FD254751CA00D30DFB /* OTPIntentExtn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A87743852547228B00D30DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A877438E2547228C00D30DFB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A87743FC254751CA00D30DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A827C63E2616676B00CEE523 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A899323925469AB0005E7553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A899324625469AB1005E7553 /* Preview Assets.xcassets in Resources */,
+				A827C645261669FA00CEE523 /* Assets.xcassets in Resources */,
+				A899324325469AB1005E7553 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A87743832547228B00D30DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87743D72547302400D30DFB /* TOTPGenerator.m in Sources */,
+				A877438C2547228B00D30DFB /* OTP_Widget_Extn.swift in Sources */,
+				A859B482261601DA00684F64 /* WidgetView.swift in Sources */,
+				A87743EB25474EF200D30DFB /* SelectOTPIntent.intentdefinition in Sources */,
+				A8A1DD69262993910064EBFC /* CounterWidget.swift in Sources */,
+				A87743D52547302400D30DFB /* OTPGenerator.m in Sources */,
+				A87744372547605400D30DFB /* IntentHandler.swift in Sources */,
+				A87743D92547302400D30DFB /* MF_Base32Additions.m in Sources */,
+				A877439B2547234600D30DFB /* OTPModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A87743FA254751CA00D30DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87744192547552100D30DFB /* OTPModel.swift in Sources */,
+				A87744122547524500D30DFB /* SelectOTPIntent.intentdefinition in Sources */,
+				A8A1DD6D262993910064EBFC /* CounterWidget.swift in Sources */,
+				A8774401254751CA00D30DFB /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A899323725469AB0005E7553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88446F426180E7800D4AD76 /* OAListView.swift in Sources */,
+				A8509DC82548178200DFBF42 /* SelectOTPIntent.intentdefinition in Sources */,
+				A81377BA261C22E8003D8920 /* CodeScanner.swift in Sources */,
+				A87743D42547302400D30DFB /* OTPGenerator.m in Sources */,
+				A87743D62547302400D30DFB /* TOTPGenerator.m in Sources */,
+				A81377D0261C3743003D8920 /* OTPViewModel.swift in Sources */,
+				A899324125469AB0005E7553 /* ContentView.swift in Sources */,
+				A899326E2546A350005E7553 /* KeychainItemAccessibility.swift in Sources */,
+				A81377D5261C3919003D8920 /* OAScanQRVie.swift in Sources */,
+				A81377B5261C053B003D8920 /* ToastModifier.swift in Sources */,
+				A8137797261BE562003D8920 /* OAAddManualViewModel.swift in Sources */,
+				A81377BF261C231E003D8920 /* SingleOTPView.swift in Sources */,
+				A899325F25469FD2005E7553 /* OTPModel.swift in Sources */,
+				A88447012618222500D4AD76 /* OAAddManualView.swift in Sources */,
+				A8A1DD71262993960064EBFC /* CounterWidget.swift in Sources */,
+				A899323F25469AB0005E7553 /* Widget_AuthApp.swift in Sources */,
+				A87743D82547302400D30DFB /* MF_Base32Additions.m in Sources */,
+				A88446FC26180F8700D4AD76 /* OAViewModel.swift in Sources */,
+				A89932722546A370005E7553 /* KeychainWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A87743912547228C00D30DFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A87743862547228B00D30DFB /* OTP Widget ExtnExtension */;
+			targetProxy = A87743902547228C00D30DFB /* PBXContainerItemProxy */;
+		};
+		A8774404254751CA00D30DFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A87743FD254751CA00D30DFB /* OTPIntentExtn */;
+			targetProxy = A8774403254751CA00D30DFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A87743942547228C00D30DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OTP Widget ExtnExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				INFOPLIST_FILE = "OTP Widget Extn/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth.OTP-Widget-Extn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A87743952547228C00D30DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OTP Widget ExtnExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				INFOPLIST_FILE = "OTP Widget Extn/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth.OTP-Widget-Extn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A8774407254751CA00D30DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OTPIntentExtn/OTPIntentExtn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				INFOPLIST_FILE = OTPIntentExtn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth.OTPIntentExtn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8774408254751CA00D30DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OTPIntentExtn/OTPIntentExtn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				INFOPLIST_FILE = OTPIntentExtn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth.OTPIntentExtn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A899324825469AB1005E7553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A899324925469AB1005E7553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A899324B25469AB1005E7553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Widget Auth/Widget Auth.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Widget Auth/Preview Content\"";
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Widget Auth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A899324C25469AB1005E7553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Widget Auth/Widget Auth.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Widget Auth/Preview Content\"";
+				DEVELOPMENT_TEAM = Q774K33HT4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Widget Auth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeeva.Widget-Auth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A87743932547228C00D30DFB /* Build configuration list for PBXNativeTarget "OTP Widget ExtnExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A87743942547228C00D30DFB /* Debug */,
+				A87743952547228C00D30DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8774406254751CA00D30DFB /* Build configuration list for PBXNativeTarget "OTPIntentExtn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8774407254751CA00D30DFB /* Debug */,
+				A8774408254751CA00D30DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A899323625469AB0005E7553 /* Build configuration list for PBXProject "Widget Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A899324825469AB1005E7553 /* Debug */,
+				A899324925469AB1005E7553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A899324A25469AB1005E7553 /* Build configuration list for PBXNativeTarget "Widget Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A899324B25469AB1005E7553 /* Debug */,
+				A899324C25469AB1005E7553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A899323325469AB0005E7553 /* Project object */;
+}
