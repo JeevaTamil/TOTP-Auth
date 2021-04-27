@@ -23,118 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "39E03B8B-4E3A-408F-AA8A-970A754ECF16"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OTPViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "deleteOTP(indexSet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1D6EB644-FDF9-4304-88CD-EFD271611ECA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OTPViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "deleteOTP(indexSet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CFB48A14-D90C-4F49-B99C-9943A5D6784E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OTPViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "fetchAllOTPs()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C55486E-783F-47E0-AB2A-94FF0D42E583"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OTPViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "getOTPs()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3CEED8FE-59AE-48ED-9195-3D02612F82A5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OTPViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "addOTP(otp:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C5B5BC62-005D-4C55-A198-79D424FB205D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTP Widget Extn/OTP_Widget_Extn.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getTimeline(in:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "025F2199-B8F5-4588-B2DE-1E9099141F3B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTP Widget Extn/OTP_Widget_Extn.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getTimeline(in:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "AF4F6C3B-881F-4641-B95A-1640A00F18F5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -174,42 +62,10 @@
             filePath = "Widget Auth/Model/OTPModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "getAllOTPModels()"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E19EBFE-C08F-4B2D-A8C1-1713449B441E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTP Widget Extn/OTP_Widget_Extn.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "getTimeline(in:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DE808B6E-FB3C-4CA8-BA7F-A01DC1F05333"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "getItems()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,8 +78,8 @@
             filePath = "Widget Auth/Model/OTPModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "getAllOTPModels()"
             landmarkType = "9">
          </BreakpointContent>
@@ -231,62 +87,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1C6C03FA-C1D3-490E-B43E-E1AFB59DA3AB"
-            shouldBeEnabled = "No"
+            uuid = "6F1CBDD3-1EE7-4206-960D-B8D7F6C33753"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Widget Auth/View/OAListView.swift"
+            filePath = "Widget Auth/ViewModel/OAViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "performOnURL(url:)"
-            landmarkType = "7">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "OAViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5F307D03-BC65-428C-ABF1-DC8710575E88"
+            uuid = "0CB5425C-C509-4A02-ABBD-2A04E57DCDE2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OTPIntentExtn/IntentHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getItems()"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "provideOtp1OptionsCollection(for:with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5F307D03-BC65-428C-ABF1-DC8710575E88 - ec2aa57004075b07"
+                  uuid = "0CB5425C-C509-4A02-ABBD-2A04E57DCDE2 - 6058cef52fb88592"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "OTPIntentExtn.IntentHandler.getItems() -&gt; Swift.Array&lt;OTPIntentExtn.OTPValue&gt;"
+                  symbolName = "OTPIntentExtn.IntentHandler.provideOtp1OptionsCollection(for: OTPIntentExtn.SelectOTPIntent, with: (Swift.Optional&lt;__C.INObjectCollection&lt;OTPIntentExtn.OTPValue&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "OTPIntentExtn"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azhagu-6139/Documents/xcode_projects/Widget%20Auth/OTPIntentExtn/IntentHandler.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "116">
                </Location>
                <Location
-                  uuid = "5F307D03-BC65-428C-ABF1-DC8710575E88 - 9b1aa6970960402d"
+                  uuid = "0CB5425C-C509-4A02-ABBD-2A04E57DCDE2 - c0c4b0a0ee88744a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (OTPIntentExtn.OTPModel) -&gt; () in OTPIntentExtn.IntentHandler.getItems() -&gt; Swift.Array&lt;OTPIntentExtn.OTPValue&gt;"
+                  symbolName = "closure #1 (OTPIntentExtn.OTPModel) -&gt; () in OTPIntentExtn.IntentHandler.provideOtp1OptionsCollection(for: OTPIntentExtn.SelectOTPIntent, with: (Swift.Optional&lt;__C.INObjectCollection&lt;OTPIntentExtn.OTPValue&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "OTPIntentExtn"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azhagu-6139/Documents/xcode_projects/Widget%20Auth/OTPIntentExtn/IntentHandler.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "228">
                </Location>
             </Locations>
@@ -295,24 +151,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7FE7086F-299A-4F18-A009-477359029A4B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "provideOtp1OptionsCollection(for:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9CE7CFDF-DA67-4870-914C-168468A6841C"
-            shouldBeEnabled = "No"
+            uuid = "2F177A96-85B8-4876-9D5F-161181AED722"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OTPIntentExtn/IntentHandler.swift"
@@ -320,70 +160,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "getItems()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "408D5291-6207-49F3-8BA7-604654DF1885"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "confirm(intent:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E8B23BE3-455A-44F7-A22B-A96BE3CC0F3F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "handle(intent:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0916B4F2-3616-47A0-8C28-1CEC32B9B9E7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "confirm(intent:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "80370637-AD2E-42AD-BCB5-37422F0C2F31"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTPIntentExtn/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
             landmarkName = "provideOtp1OptionsCollection(for:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,16 +167,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F8A93975-2810-4564-813A-E431DC7C9B22"
+            uuid = "12382B7E-24BE-4894-BBEA-109B4521914F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Widget Auth/ViewModel/OAViewModel.swift"
+            filePath = "OTPIntentExtn/IntentHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "deleteOTP(at:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "provideOtp1OptionsCollection(for:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF308739-AE87-4AD4-9311-B6DF6069AB68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTPIntentExtn/IntentHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "provideOtp1OptionsCollection(for:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF308739-AE87-4AD4-9311-B6DF6069AB68 - 35596da26d5b859d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (OTPIntentExtn.OTPValue) -&gt; Swift.Bool in OTPIntentExtn.IntentHandler.provideOtp1OptionsCollection(for: OTPIntentExtn.SelectOTPIntent, with: (Swift.Optional&lt;__C.INObjectCollection&lt;OTPIntentExtn.OTPValue&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OTPIntentExtn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azhagu-6139/Documents/xcode_projects/Widget%20Auth/OTPIntentExtn/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "EF308739-AE87-4AD4-9311-B6DF6069AB68 - 7891e3448558f69a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (OTPIntentExtn.OTPValue) -&gt; Swift.Bool in closure #2 (OTPIntentExtn.OTPValue) -&gt; Swift.Bool in OTPIntentExtn.IntentHandler.provideOtp1OptionsCollection(for: OTPIntentExtn.SelectOTPIntent, with: (Swift.Optional&lt;__C.INObjectCollection&lt;OTPIntentExtn.OTPValue&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OTPIntentExtn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azhagu-6139/Documents/xcode_projects/Widget%20Auth/OTPIntentExtn/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1916C1AF-CDBE-4F2D-874B-B4479BE6EE3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTP Widget Extn/WidgetView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25C4CEFF-3D14-442D-B4C8-FA78E9AB131A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTP Widget Extn/WidgetView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60504A9D-8816-428E-A991-286BD7CD0EFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTP Widget Extn/WidgetView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getTimeline(for:in:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

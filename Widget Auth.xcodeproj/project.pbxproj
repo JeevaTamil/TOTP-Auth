@@ -11,15 +11,22 @@
 		A81377B5261C053B003D8920 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377B4261C053B003D8920 /* ToastModifier.swift */; };
 		A81377BA261C22E8003D8920 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377B9261C22E8003D8920 /* CodeScanner.swift */; };
 		A81377BF261C231E003D8920 /* SingleOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377BE261C231E003D8920 /* SingleOTPView.swift */; };
-		A81377D0261C3743003D8920 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377CF261C3743003D8920 /* OTPViewModel.swift */; };
-		A81377D5261C3919003D8920 /* OAScanQRVie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377D4261C3919003D8920 /* OAScanQRVie.swift */; };
+		A81377D0261C3743003D8920 /* OTPFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377CF261C3743003D8920 /* OTPFormViewModel.swift */; };
+		A81377D5261C3919003D8920 /* OAScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377D4261C3919003D8920 /* OAScanQRView.swift */; };
+		A813E4822637D9470041C781 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4812637D9470041C781 /* PersistenceManager.swift */; };
+		A813E49A2637FA440041C781 /* OTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4992637FA440041C781 /* OTPError.swift */; };
+		A813E4A0263812F60041C781 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E49F263812F60041C781 /* Facebook.swift */; };
+		A813E4A8263814760041C781 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4A7263814760041C781 /* Google.swift */; };
+		A813E4B026381E0D0041C781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324225469AB1005E7553 /* Assets.xcassets */; };
+		A813E4B726381E140041C781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324225469AB1005E7553 /* Assets.xcassets */; };
 		A827C63E2616676B00CEE523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
 		A827C645261669FA00CEE523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
 		A8509DC82548178200DFBF42 /* SelectOTPIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A87743E925474EF200D30DFB /* SelectOTPIntent.intentdefinition */; };
+		A853C29026368CAA00BF626C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A853C28F26368CAA00BF626C /* DataStore.swift */; };
+		A853C29B2636AE5300BF626C /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A853C29A2636AE5300BF626C /* ModelType.swift */; };
 		A859B482261601DA00684F64 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859B47D2616013800684F64 /* WidgetView.swift */; };
 		A87743882547228B00D30DFB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89932CF2546E1EB005E7553 /* WidgetKit.framework */; };
 		A87743892547228B00D30DFB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89932D12546E1EB005E7553 /* SwiftUI.framework */; };
-		A877438C2547228B00D30DFB /* OTP_Widget_Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */; };
 		A877438E2547228C00D30DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
 		A87743922547228C00D30DFB /* OTP Widget ExtnExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A877439B2547234600D30DFB /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899325E25469FD2005E7553 /* OTPModel.swift */; };
@@ -45,9 +52,14 @@
 		A899325F25469FD2005E7553 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899325E25469FD2005E7553 /* OTPModel.swift */; };
 		A899326E2546A350005E7553 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899326D2546A350005E7553 /* KeychainItemAccessibility.swift */; };
 		A89932722546A370005E7553 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89932712546A370005E7553 /* KeychainWrapper.swift */; };
-		A8A1DD69262993910064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
-		A8A1DD6D262993910064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
-		A8A1DD71262993960064EBFC /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1DD64262993740064EBFC /* CounterWidget.swift */; };
+		A8F546F9262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F546F7262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf */; };
+		A8F546FA262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F546F7262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf */; };
+		A8F546FB262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F546F8262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf */; };
+		A8F546FC262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F546F8262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf */; };
+		A8F54703262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F54701262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf */; };
+		A8F54704262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F54701262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf */; };
+		A8F54705262DB20E001AAE4A /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F54702262DB20E001AAE4A /* NunitoSans-SemiBold.ttf */; };
+		A8F54706262DB20E001AAE4A /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F54702262DB20E001AAE4A /* NunitoSans-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,13 +99,18 @@
 		A81377B4261C053B003D8920 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		A81377B9261C22E8003D8920 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		A81377BE261C231E003D8920 /* SingleOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOTPView.swift; sourceTree = "<group>"; };
-		A81377CF261C3743003D8920 /* OTPViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
-		A81377D4261C3919003D8920 /* OAScanQRVie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAScanQRVie.swift; sourceTree = "<group>"; };
+		A81377CF261C3743003D8920 /* OTPFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFormViewModel.swift; sourceTree = "<group>"; };
+		A81377D4261C3919003D8920 /* OAScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAScanQRView.swift; sourceTree = "<group>"; };
+		A813E4812637D9470041C781 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A813E4992637FA440041C781 /* OTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPError.swift; sourceTree = "<group>"; };
+		A813E49F263812F60041C781 /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		A813E4A7263814760041C781 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
 		A8509DCC25481FF500DFBF42 /* OTPIntentExtn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPIntentExtn.entitlements; sourceTree = "<group>"; };
+		A853C28F26368CAA00BF626C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		A853C29A2636AE5300BF626C /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		A859B47D2616013800684F64 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		A87743212547152D00D30DFB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		A87743872547228B00D30DFB /* OTP Widget ExtnExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OTP Widget ExtnExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP_Widget_Extn.swift; sourceTree = "<group>"; };
 		A877438D2547228C00D30DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A877438F2547228C00D30DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8774398254722BC00D30DFB /* OTP Widget ExtnExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTP Widget ExtnExtension.entitlements"; sourceTree = "<group>"; };
@@ -124,7 +141,10 @@
 		A89932CF2546E1EB005E7553 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A89932D12546E1EB005E7553 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		A89932E52546E52E005E7553 /* OTP WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTP WidgetExtension.entitlements"; sourceTree = "<group>"; };
-		A8A1DD64262993740064EBFC /* CounterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWidget.swift; sourceTree = "<group>"; };
+		A8F546F7262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A8F546F8262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A8F54701262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A8F54702262DB20E001AAE4A /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +174,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A813E4802637D9140041C781 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A81377B4261C053B003D8920 /* ToastModifier.swift */,
+				A81377B9261C22E8003D8920 /* CodeScanner.swift */,
+				A853C29A2636AE5300BF626C /* ModelType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A813E49E263812E10041C781 /* SocialIconPaths */ = {
+			isa = PBXGroup;
+			children = (
+				A813E49F263812F60041C781 /* Facebook.swift */,
+				A813E4A7263814760041C781 /* Google.swift */,
+			);
+			path = SocialIconPaths;
+			sourceTree = "<group>";
+		};
+		A853C28E26368C9800BF626C /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				A853C28F26368CAA00BF626C /* DataStore.swift */,
+				A813E4812637D9470041C781 /* PersistenceManager.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
 		A877438A2547228B00D30DFB /* OTP Widget Extn */ = {
 			isa = PBXGroup;
 			children = (
-				A8A1DD64262993740064EBFC /* CounterWidget.swift */,
-				A877438B2547228B00D30DFB /* OTP_Widget_Extn.swift */,
 				A877438D2547228C00D30DFB /* Assets.xcassets */,
 				A877438F2547228C00D30DFB /* Info.plist */,
 				A859B47D2616013800684F64 /* WidgetView.swift */,
@@ -169,6 +215,7 @@
 		A87743CB25472FF700D30DFB /* Auth_Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8F546F6262DB1FB001AAE4A /* Font */,
 				A87743DC2547304600D30DFB /* WidgetAuth-Bridging-Header.h */,
 				A87743CE2547302400D30DFB /* MF_Base32Additions.h */,
 				A87743D32547302400D30DFB /* MF_Base32Additions.m */,
@@ -216,8 +263,10 @@
 		A899323D25469AB0005E7553 /* Widget Auth */ = {
 			isa = PBXGroup;
 			children = (
-				A81377B9261C22E8003D8920 /* CodeScanner.swift */,
-				A81377B4261C053B003D8920 /* ToastModifier.swift */,
+				A813E49E263812E10041C781 /* SocialIconPaths */,
+				A813E4802637D9140041C781 /* Utils */,
+				A853C28E26368C9800BF626C /* DataStorage */,
+				A8F54700262DB20E001AAE4A /* Font */,
 				A87743CB25472FF700D30DFB /* Auth_Files */,
 				A899324725469AB1005E7553 /* Info.plist */,
 				A89932622546A0EA005E7553 /* Widget Auth.entitlements */,
@@ -243,7 +292,7 @@
 		A899325A25469F95005E7553 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A81377CF261C3743003D8920 /* OTPViewModel.swift */,
+				A81377CF261C3743003D8920 /* OTPFormViewModel.swift */,
 				A88446FB26180F8700D4AD76 /* OAViewModel.swift */,
 				A8137796261BE562003D8920 /* OAAddManualViewModel.swift */,
 			);
@@ -254,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				A899325E25469FD2005E7553 /* OTPModel.swift */,
+				A813E4992637FA440041C781 /* OTPError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,7 +315,7 @@
 				A88446F326180E7800D4AD76 /* OAListView.swift */,
 				A88447002618222500D4AD76 /* OAAddManualView.swift */,
 				A81377BE261C231E003D8920 /* SingleOTPView.swift */,
-				A81377D4261C3919003D8920 /* OAScanQRVie.swift */,
+				A81377D4261C3919003D8920 /* OAScanQRView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +346,25 @@
 				A87743212547152D00D30DFB /* IntentsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8F546F6262DB1FB001AAE4A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A8F546F7262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf */,
+				A8F546F8262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf */,
+			);
+			name = Font;
+			path = "Widget Auth/Font";
+			sourceTree = SOURCE_ROOT;
+		};
+		A8F54700262DB20E001AAE4A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A8F54701262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf */,
+				A8F54702262DB20E001AAE4A /* NunitoSans-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +471,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F54706262DB20E001AAE4A /* NunitoSans-SemiBold.ttf in Resources */,
+				A8F54704262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */,
+				A8F546FC262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf in Resources */,
+				A8F546FA262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */,
+				A813E4B726381E140041C781 /* Assets.xcassets in Resources */,
 				A877438E2547228C00D30DFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A813E4B026381E0D0041C781 /* Assets.xcassets in Resources */,
 				A827C63E2616676B00CEE523 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,9 +493,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F546FB262DB1FB001AAE4A /* NunitoSans-SemiBold.ttf in Resources */,
+				A8F546F9262DB1FB001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */,
 				A899324625469AB1005E7553 /* Preview Assets.xcassets in Resources */,
 				A827C645261669FA00CEE523 /* Assets.xcassets in Resources */,
+				A8F54703262DB20E001AAE4A /* NunitoSans-ExtraBold.ttf in Resources */,
 				A899324325469AB1005E7553 /* Assets.xcassets in Resources */,
+				A8F54705262DB20E001AAE4A /* NunitoSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +511,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A87743D72547302400D30DFB /* TOTPGenerator.m in Sources */,
-				A877438C2547228B00D30DFB /* OTP_Widget_Extn.swift in Sources */,
 				A859B482261601DA00684F64 /* WidgetView.swift in Sources */,
 				A87743EB25474EF200D30DFB /* SelectOTPIntent.intentdefinition in Sources */,
-				A8A1DD69262993910064EBFC /* CounterWidget.swift in Sources */,
 				A87743D52547302400D30DFB /* OTPGenerator.m in Sources */,
 				A87744372547605400D30DFB /* IntentHandler.swift in Sources */,
 				A87743D92547302400D30DFB /* MF_Base32Additions.m in Sources */,
@@ -449,7 +526,6 @@
 			files = (
 				A87744192547552100D30DFB /* OTPModel.swift in Sources */,
 				A87744122547524500D30DFB /* SelectOTPIntent.intentdefinition in Sources */,
-				A8A1DD6D262993910064EBFC /* CounterWidget.swift in Sources */,
 				A8774401254751CA00D30DFB /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,22 +535,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88446F426180E7800D4AD76 /* OAListView.swift in Sources */,
+				A853C29B2636AE5300BF626C /* ModelType.swift in Sources */,
 				A8509DC82548178200DFBF42 /* SelectOTPIntent.intentdefinition in Sources */,
 				A81377BA261C22E8003D8920 /* CodeScanner.swift in Sources */,
+				A813E4A8263814760041C781 /* Google.swift in Sources */,
 				A87743D42547302400D30DFB /* OTPGenerator.m in Sources */,
 				A87743D62547302400D30DFB /* TOTPGenerator.m in Sources */,
-				A81377D0261C3743003D8920 /* OTPViewModel.swift in Sources */,
+				A81377D0261C3743003D8920 /* OTPFormViewModel.swift in Sources */,
+				A813E4A0263812F60041C781 /* Facebook.swift in Sources */,
 				A899324125469AB0005E7553 /* ContentView.swift in Sources */,
 				A899326E2546A350005E7553 /* KeychainItemAccessibility.swift in Sources */,
-				A81377D5261C3919003D8920 /* OAScanQRVie.swift in Sources */,
+				A81377D5261C3919003D8920 /* OAScanQRView.swift in Sources */,
 				A81377B5261C053B003D8920 /* ToastModifier.swift in Sources */,
 				A8137797261BE562003D8920 /* OAAddManualViewModel.swift in Sources */,
 				A81377BF261C231E003D8920 /* SingleOTPView.swift in Sources */,
 				A899325F25469FD2005E7553 /* OTPModel.swift in Sources */,
 				A88447012618222500D4AD76 /* OAAddManualView.swift in Sources */,
-				A8A1DD71262993960064EBFC /* CounterWidget.swift in Sources */,
+				A813E4822637D9470041C781 /* PersistenceManager.swift in Sources */,
+				A813E49A2637FA440041C781 /* OTPError.swift in Sources */,
 				A899323F25469AB0005E7553 /* Widget_AuthApp.swift in Sources */,
 				A87743D82547302400D30DFB /* MF_Base32Additions.m in Sources */,
+				A853C29026368CAA00BF626C /* DataStore.swift in Sources */,
 				A88446FC26180F8700D4AD76 /* OAViewModel.swift in Sources */,
 				A89932722546A370005E7553 /* KeychainWrapper.swift in Sources */,
 			);
@@ -724,7 +805,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -750,7 +831,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Widget Auth/Auth_Files/WidgetAuth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

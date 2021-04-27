@@ -14,47 +14,56 @@ struct OAAddManualView: View {
     @State private var secretChange: Bool = false
     
     @Environment(\.presentationMode) var isPresented
-    
-    @StateObject var addManualViewModel = OAAddManualViewModel()
-    @StateObject var oaVM = OAViewModel()
+    @EnvironmentObject var dataStore: DataStore
+    @ObservedObject var formVM: OTPFormViewModel
     
     var body: some View {
-        
         NavigationView {
             Form {
-                Section(header: Text("Details"), footer: Text(addManualViewModel.errorMessage).foregroundColor(.red)) {
-                    FormField(fieldString: $addManualViewModel.issuer, isEditingChanged: $issuerChange, field: "Issuer", example: "ex: Google")
-                    FormField(fieldString: $addManualViewModel.email, isEditingChanged: $nameChange, field: "Account", example: "ex: demo@example.com")
-                    FormField(fieldString: $addManualViewModel.secret, isEditingChanged: $secretChange, field: "Secret", example: "ex: ASDFGHJKL...")
+                Section(header: Text("Details")) {
+                    FormField(fieldString: $formVM.issuer, isEditingChanged: $issuerChange, field: "Issuer", example: "ex: Google")
+                    FormField(fieldString: $formVM.name, isEditingChanged: $nameChange, field: "Account", example: "ex: demo@example.com")
+                    if !formVM.updating {
+                    FormField(fieldString: $formVM.secret, isEditingChanged: $secretChange, field: "Secret", example: "ex: ASDFGHJKL...")
+                    }
                 }
-                
-                Button(action: addOTPSecret, label: {
-                    Text("ADD")
-                })
-                .disabled(!addManualViewModel.isValid)
+                updateSaveButton
             }
-            .navigationBarTitle("Add OTP", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                isPresented.wrappedValue.dismiss()
-            }){
-                Image(systemName: "multiply")
-                    .resizable()
-                    .frame(width: 16, height: 16, alignment: .center)
-            })
+            .navigationBarTitle(formVM.updating ? "Update Account" : "Add Account", displayMode: .inline)
+            .navigationBarItems(leading: cancelButton)
+        }
+    }
+}
+
+extension OAAddManualView {
+    func updateOTP() {
+        let otp = OTPModel(id: formVM.id!, issuer: formVM.issuer, name: formVM.name, secret: formVM.secret)
+        dataStore.updateOTP.send(otp)
+        isPresented.wrappedValue.dismiss()
+    }
+    
+    func addOTP() {
+        let otp = OTPModel(issuer: formVM.issuer, name: formVM.name, secret: formVM.secret)
+        dataStore.addOTP.send(otp)
+        isPresented.wrappedValue.dismiss()
+    }
+    
+    var cancelButton: some View {
+        Button("Cancel") {
+            isPresented.wrappedValue.dismiss()
         }
     }
     
-    func addOTPSecret() {
-        let otpObj = OTPModel(name: addManualViewModel.issuer, email: addManualViewModel.email, secret: addManualViewModel.secret)
-        
-        oaVM.createOTP(otp: otpObj)
-        isPresented.wrappedValue.dismiss()
+    var updateSaveButton: some View {
+        Button(formVM.updating ? "Update" : "Save", action: formVM.updating ? updateOTP : addOTP)
+            .disabled(formVM.isDisabled)
     }
 }
 
 struct OAAddManualView_Previews: PreviewProvider {
     static var previews: some View {
-        OAAddManualView()
+        OAAddManualView(formVM: OTPFormViewModel())
+            .environmentObject(DataStore())
     }
 }
 

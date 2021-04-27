@@ -24,29 +24,41 @@ struct OAWidgetProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> OAWidgetEntry {
         let firstDate = Calendar.current.date(byAdding: .second, value: 30, to: Date())!
         return Entry(date: Date(), displayDate: firstDate, otps: [
-            OTPModel(name: "Zylker", email: "emma.tech@zylker.com", secret: "ZOHOCORPORATION"),
-            OTPModel(name: "Zylker", email: "alex@zylker.com", secret: "ZOHO"),
-            OTPModel(name: "Zylker", email: "jeeva@zylker.com", secret: "CORPORATION"),
+            OTPModel(issuer: "Google", name: "emma@gmail.com", secret: "Google"),
+            OTPModel(issuer: "Facebook", name: "alex@facebook.com", secret: "Facebook"),
+            OTPModel(issuer: "Apple", name: "jeeva@apple.com", secret: "Apple"),
         ])
     }
     
     func getSnapshot(for configuration: SelectOTPIntent, in context: Context, completion: @escaping (OAWidgetEntry) -> Void) {
         let firstDate = Calendar.current.date(byAdding: .second, value: 30, to: Date())!
         completion(Entry(date: Date(), displayDate: firstDate, otps: [
-            OTPModel(name: "Zylker", email: "emma.tech@zylker.com", secret: "ZOHOCORPORATION"),
-            OTPModel(name: "Zylker", email: "alex@zylker.com", secret: "ZOHO"),
-            OTPModel(name: "Zylker", email: "jeeva@zylker.com", secret: "CORPORATION"),
+            OTPModel(issuer: "Google", name: "emma@gmail.com", secret: "Google"),
+            OTPModel(issuer: "Facebook", name: "alex@facebook.com", secret: "Facebook"),
+            OTPModel(issuer: "Apple", name: "jeeva@apple.com", secret: "Apple"),
         ]))
     }
     
     func getTimeline(for configuration: SelectOTPIntent, in context: Context, completion: @escaping (Timeline<OAWidgetEntry>) -> Void) {
        
         var entries = [Entry]()
-        guard let otp = configuration.otp1 else { return }
+        guard let otpArr = configuration.otp1 else { return }
+        var otp = [OTPValue]()
+        
+        for widgetOTP in otpArr {
+            let flag = getAllOTPModels().contains { (OTPModel) -> Bool in
+                OTPModel.secret == widgetOTP.secret
+            }
+            
+            if flag {
+                otp.append(widgetOTP)
+            }
+        }
+        
         var otpModelArr = [OTPModel]()
         for item in otp {
             if let name = item.name, let email = item.email, let secret = item.secret {
-                otpModelArr.append(OTPModel(name: name, email: email, secret: secret))
+                otpModelArr.append(OTPModel(issuer: name, name: email, secret: secret))
             }
         }
         let currentDate = Date()
@@ -121,30 +133,33 @@ struct OASingleOTPView: View {
             ZStack {
                 // Color.white
                 //   .cornerRadius(5)
-                Image(otpModel.name.lowercased())
+                Image(otpModel.issuer.lowercased())
                     .resizable()
+                    .scaledToFit()
+                    .clipShape(ContainerRelativeShape())
             }
             .frame(width: 32, height: 32, alignment: .center)
             .cornerRadius(5)
             
             VStack(alignment: .leading) {
                 Text(otpModel.name)
-                    .font(.system(size: 14))
+                    .font(.custom(Font.extraBold.rawValue, size: 12))
                     .bold()
-                Text(otpModel.email)
-                    .font(.system(size: 12))
+                Text(otpModel.name)
+                    .font(.custom(Font.semiBold.rawValue, size: 12))
                     .foregroundColor(.secondary)
             }
             Spacer()
             VStack(alignment: .trailing) {
                 Text(generateOTP(otp: otpModel, at: atDate))
-                    .font(.system(size: 16))
+                    .font(.custom(Font.extraBold.rawValue, size: 18))
                     .bold()
-                Text(displayDate, style: .timer)
-                    .font(.system(size: 12))
-                    .foregroundColor(.blue)
-                    .frame(width: 40)
+                    .fixedSize()
                 
+                Text(displayDate, style: .timer)
+                    .font(.custom(Font.semiBold.rawValue, size: 12))
+                    .foregroundColor(.blue)
+                    .frame(width: 27)
             }
         }
     }
@@ -163,14 +178,18 @@ struct OASingleOTPView: View {
         }
         return codeVal
     }
+    
+    enum Font: String {
+        case extraBold = "NunitoSans-ExtraBold"
+        case semiBold = "NunitoSans-SemiBold"
+    }
 }
 
 // MARK:- Widgets
 struct OAWidget: Widget {
+    var kind = "OAWidget"
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: "OAWidget", intent: SelectOTPIntent.self, provider: OAWidgetProvider()) { entry in
-            // OTP_Widget_ExtnEntryView(entry: entry)
-            // DemoWidget(entry: entry)
+        IntentConfiguration(kind: kind, intent: SelectOTPIntent.self, provider: OAWidgetProvider()) { entry in
             OAWidgetView(entry: entry)
         }
         .configurationDisplayName("OneAuth OTPs")
@@ -179,6 +198,14 @@ struct OAWidget: Widget {
     }
 }
 
+// MARK:- Widget bundle
+@main
+struct OTPWidgetBunlde: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        OAWidget()
+    }
+}
 
 struct WidgetView: View {
     let otpModelArr: [OTPModel]
@@ -191,8 +218,14 @@ struct WidgetView: View {
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            WidgetView(otpModelArr: [OTPModel(name: "Zylker", email: "emma.tech@zylker.com", secret: "ZOHOCORPORATION")])
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            WidgetView(
+                otpModelArr: [
+                    OTPModel(issuer: "Google", name: "emma@gmail.com", secret: "Google"),
+                    OTPModel(issuer: "Facebook", name: "alex@facebook.com", secret: "Facebook"),
+                    OTPModel(issuer: "Apple", name: "jeeva@apple.com", secret: "Apple")
+                    ]
+            )
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
         
     }
@@ -220,3 +253,10 @@ func fetchAllOTPs() -> [OTPModel] {
     return fetchedOTPs
 }
 
+
+extension String {
+    func separating(every: Int, separator: String) -> String {
+        let regex = #"(.{\#(every)})(?=.)"#
+        return self.replacingOccurrences(of: regex, with: "$1\(separator)", options: [.regularExpression])
+    }
+}

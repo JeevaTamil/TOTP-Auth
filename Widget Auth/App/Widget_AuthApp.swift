@@ -12,6 +12,7 @@ struct Widget_AuthApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(DataStore())
         }
     }
 }

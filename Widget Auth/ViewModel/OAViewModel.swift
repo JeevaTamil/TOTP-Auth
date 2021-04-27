@@ -14,18 +14,18 @@ class OAViewModel: ObservableObject {
     @Published var otpList = [OTPModel]()
     private let key = "oa_otp_secrets"
     private let group = "group.com.jeeva.widgetauth"
+    private let kind = "OAWidget"
     
     init() {
         readOTP()
     }
     
     //MARK:- create new OTP
-    func createOTP(otp: OTPModel) {
+    func createOTP(_ otp: OTPModel) {
         otpList.append(otp)
         encodeAndStoreOTPs(otpList: otpList)
         DispatchQueue.main.async {
             WidgetCenter.shared.reloadAllTimelines()
-            print("widget reloaded")
         }
     }
     
@@ -41,7 +41,7 @@ class OAViewModel: ObservableObject {
     }
     
     //MARK:- update OTP
-    func updateOTP(indexSet: IndexSet) {
+    func updateOTP(_ otp: OTPModel) {
         
     }
     
@@ -54,14 +54,18 @@ class OAViewModel: ObservableObject {
         
         //otpList.remove(atOffsets: indexSet)
         encodeAndStoreOTPs(otpList: otpList)
-        //DispatchQueue.main.async {
+       
+        // reload widget
+        DispatchQueue.main.async {
             WidgetCenter.shared.reloadAllTimelines()
-            print("widget reloaded")
-       // }
-        
-        
-        
+        }
     }
+    
+    //MARK:- load OTP
+    func loadOTP() {
+        otpList = OTPModel.sampleData
+    }
+        
     
     //MARK:- Util
     func encodeAndStoreOTPs(otpList: [OTPModel]) {
@@ -73,9 +77,6 @@ class OAViewModel: ObservableObject {
         }
         readOTP()
     }
-    
-   
-    
 }
 
 //MARK:- Extensions
@@ -88,12 +89,12 @@ extension String {
 }
 
 
-func generateOTPs(otp_vm: OTPViewModel) -> String {
+func generateOTPs(otp: OTPModel) -> String {
     let period : Int = 30
     let digits : Int = 6
     let algorithm = "SHA1"
     
-    let secretData = NSData(base32String: otp_vm.secret)
+    let secretData = NSData(base32String: otp.secret)
     
     let now = Date()
     let timeStamp = now.timeIntervalSince1970

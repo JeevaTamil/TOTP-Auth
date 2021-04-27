@@ -9,10 +9,16 @@ import Foundation
 
 
 struct OTPModel: Identifiable, Codable {
-    var id = UUID()
+    var id: String = UUID().uuidString
+    var issuer: String
     var name: String
-    var email: String
     var secret: String
+    
+    static var sampleData = [
+        OTPModel(issuer: "Google", name: "emma@gmail.com", secret: "Google"),
+        OTPModel(issuer: "Facebook", name: "alex@facebook.com", secret: "Facebook"),
+        OTPModel(issuer: "Apple", name: "jeeva@apple.com", secret: "Apple"),
+    ]
 }
 
 func getAllOTPModels() -> [OTPModel] {

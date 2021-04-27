@@ -20,38 +20,27 @@ class IntentHandler: INExtension {
 extension IntentHandler: SelectOTPIntentHandling {
     func provideOtp1OptionsCollection(for intent: SelectOTPIntent, with completion: @escaping (INObjectCollection<OTPValue>?, Error?) -> Void) {
         
-        print(intent.otp1)
-        
-        completion(INObjectCollection(items: getItems()), nil)
-    }
-
-    func confirm(intent: SelectOTPIntent, completion: @escaping (SelectOTPIntentResponse) -> Void) {
-        
-        completion(SelectOTPIntentResponse())
-        
-        print("Confirm method called")
-    }
-    
-    func handle(intent: SelectOTPIntent, completion: @escaping (SelectOTPIntentResponse) -> Void) {
-        completion(SelectOTPIntentResponse())
-        
-        print("Handle method called")
-    }
-    
-    func getItems() -> [OTPValue] {
-        
-        
         var otpItems = [OTPValue]()
         getAllOTPModels().forEach { (otpModel) in
             print(otpModel.name.lowercased())
-            let otpIntentObject = OTPValue(identifier: otpModel.id.uuidString, display: otpModel.name, subtitle: otpModel.email, image: INImage(named: otpModel.name.lowercased()))
-            otpIntentObject.name = otpModel.name
-            otpIntentObject.email = otpModel.email
+            let otpIntentObject = OTPValue(identifier: otpModel.id, display: otpModel.issuer, subtitle: otpModel.name, image: INImage(named: otpModel.issuer.lowercased()))
+            otpIntentObject.name = otpModel.issuer
+            otpIntentObject.email = otpModel.name
             otpIntentObject.secret = otpModel.secret
             otpItems.append(otpIntentObject)
         }
-        return otpItems
+        
+        if let selectedOTPArr = intent.otp1 {
+            otpItems =  otpItems.filter { (intentOTP) -> Bool in
+                return !selectedOTPArr.contains { (selectedOTP) -> Bool in
+                    selectedOTP.secret == intentOTP.secret
+                }
+            }
+        }
+        
+        completion(INObjectCollection(items: otpItems), nil)
     }
+  
     
     func getIcon(issuer: String) -> Icon {
         switch issuer {

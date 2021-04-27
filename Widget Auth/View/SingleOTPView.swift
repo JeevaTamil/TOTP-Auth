@@ -21,30 +21,29 @@ struct SingleOTPView: View {
     
     var body: some View {
         HStack {
-            Image(otp.name.lowercased())
+            Image(otp.issuer.lowercased())
                 .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50)
+                .scaledToFill()
+                .frame(width: 34, height: 34)
                 .cornerRadius(5)
+                .shadow(color: Color.secondary.opacity(0.3), radius: 4, x: 0, y: 0)
             VStack(alignment: .leading, spacing: spacing) {
-                Text(otp.name)
+                Text(otp.issuer)
                     .font(.headline)
                     .bold()
-                Text(otp.email)
+                Text(otp.name)
                     .font(.caption)
             }
             Spacer()
             VStack(alignment: .trailing, spacing: spacing) {
-                Text(generateOTPs(otp_vm: OTPViewModel(otpModel: otp)))
-                    .font(.title3)
-                    .bold()
+                Text(generateOTPs(otp: otp))
+                    .font(.system(size: 20, weight: .bold, design: .monospaced))
                 Text("\(timeRemaining)")
                     .font(.callout)
-                
             }
         }
         .onTapGesture {
-            UIPasteboard.general.string = generateOTPs(otp_vm: OTPViewModel(otpModel: otp))
+            UIPasteboard.general.string = generateOTPs(otp: otp)
             print("copied")
             withAnimation {
                 isToastPresented.toggle()
@@ -66,7 +65,7 @@ struct SingleOTPView: View {
 
 struct SingleOTPView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleOTPView(otp: OTPModel(name: "Zylker", email: "jeeva@gmail.com", secret: "ZOHO"), isToastPresented: .constant(false))
+        SingleOTPView(otp: OTPModel.sampleData.first!, isToastPresented: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }
