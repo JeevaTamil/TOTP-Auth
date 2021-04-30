@@ -21,18 +21,17 @@ struct SingleOTPView: View {
     
     var body: some View {
         HStack {
-            Image(otp.issuer.lowercased())
+            Image(uiImage: UIImage.init(named: otp.issuer.lowercased()) ?? UIImage(named: "shield")!)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 34, height: 34)
-                .cornerRadius(5)
-                .shadow(color: Color.secondary.opacity(0.3), radius: 4, x: 0, y: 0)
             VStack(alignment: .leading, spacing: spacing) {
                 Text(otp.issuer)
                     .font(.headline)
                     .bold()
                 Text(otp.name)
                     .font(.caption)
+                    .lineLimit(1)
             }
             Spacer()
             VStack(alignment: .trailing, spacing: spacing) {

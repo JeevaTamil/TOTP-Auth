@@ -16,7 +16,7 @@ struct OAListView: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach (dataStore.otps) { otp in
+                    ForEach (dataStore.otps.value) { otp in
                         SingleOTPView(otp: otp, isToastPresented: $isToastPresented)
                             .onLongPressGesture {
                                 modelType = .update(otp)
@@ -31,7 +31,7 @@ struct OAListView: View {
             .navigationBarItems(
                 trailing: addButton
             )
-            .alert(item: $dataStore.appError) { appError in
+            .alert(item: $dataStore.appError.value) { appError in
                 Alert(title: Text("Oh ho"), message: Text(appError.error.localizedDescription), dismissButton: .default(Text("OK")))
             }
             //.onOpenURL(perform: performOnURL)

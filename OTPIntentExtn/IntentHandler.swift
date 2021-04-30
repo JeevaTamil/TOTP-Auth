@@ -6,6 +6,7 @@
 //
 
 import Intents
+import UIKit
 
 class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
@@ -23,13 +24,21 @@ extension IntentHandler: SelectOTPIntentHandling {
         var otpItems = [OTPValue]()
         getAllOTPModels().forEach { (otpModel) in
             print(otpModel.name.lowercased())
-            let otpIntentObject = OTPValue(identifier: otpModel.id, display: otpModel.issuer, subtitle: otpModel.name, image: INImage(named: otpModel.issuer.lowercased()))
+
+            var otpIntentObject: OTPValue
+            if UIImage(named: otpModel.issuer.lowercased()) != nil {
+                otpIntentObject = OTPValue(identifier: otpModel.id, display: otpModel.issuer, subtitle: otpModel.name, image: INImage(named: otpModel.issuer.lowercased()))
+            } else {
+                otpIntentObject = OTPValue(identifier: otpModel.id, display: otpModel.issuer, subtitle: otpModel.name, image: INImage(named: "shield"))
+            }
+
+
             otpIntentObject.name = otpModel.issuer
             otpIntentObject.email = otpModel.name
             otpIntentObject.secret = otpModel.secret
             otpItems.append(otpIntentObject)
         }
-        
+
         if let selectedOTPArr = intent.otp1 {
             otpItems =  otpItems.filter { (intentOTP) -> Bool in
                 return !selectedOTPArr.contains { (selectedOTP) -> Bool in
@@ -37,7 +46,7 @@ extension IntentHandler: SelectOTPIntentHandling {
                 }
             }
         }
-        
+
         completion(INObjectCollection(items: otpItems), nil)
     }
   

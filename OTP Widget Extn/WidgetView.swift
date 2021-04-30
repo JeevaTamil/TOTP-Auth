@@ -108,8 +108,17 @@ struct OAWidgetView: View {
         
         switch widgetFamily {
         case .systemSmall:
-            Text("hello")
+            if entry.otps.isEmpty {
+                EmptyStateView()
+            } else {
+            ZStack {
+                Color("WidgetBackground")
+            SmallWidget(otpModel: entry.otps.first!, atDate: entry.date, displayDate: entry.displayDate)
+            }
+            }
         default:
+            ZStack {
+                Color("WidgetBackground")
             VStack(spacing: 5) {
                 ForEach(entry.otps) { otpModel in
                     Link(destination: URL(string: "oa://\(otpModel.secret)")!) {
@@ -118,72 +127,131 @@ struct OAWidgetView: View {
                     Divider()
                 }
             }.padding(.all)
+            }
         }
     }
 }
 
+// MARK:- Single OTP view
 struct OASingleOTPView: View {
     let otpModel: OTPModel
     let atDate: Date
     let displayDate: Date
     
     var body: some View {
-        HStack {
-            
-            ZStack {
-                // Color.white
-                //   .cornerRadius(5)
-                Image(otpModel.issuer.lowercased())
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(ContainerRelativeShape())
-            }
-            .frame(width: 32, height: 32, alignment: .center)
-            .cornerRadius(5)
-            
-            VStack(alignment: .leading) {
-                Text(otpModel.name)
-                    .font(.custom(Font.extraBold.rawValue, size: 12))
-                    .bold()
-                Text(otpModel.name)
-                    .font(.custom(Font.semiBold.rawValue, size: 12))
-                    .foregroundColor(.secondary)
-            }
-            Spacer()
-            VStack(alignment: .trailing) {
-                Text(generateOTP(otp: otpModel, at: atDate))
-                    .font(.custom(Font.extraBold.rawValue, size: 18))
-                    .bold()
-                    .fixedSize()
+            HStack {
+                Image(uiImage: UIImage.init(named: otpModel.issuer.lowercased()) ?? UIImage(named: "shield")!)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(ContainerRelativeShape())
+                        .frame(width: 32, height: 32, alignment: .center)
                 
-                Text(displayDate, style: .timer)
-                    .font(.custom(Font.semiBold.rawValue, size: 12))
-                    .foregroundColor(.blue)
-                    .frame(width: 27)
+                VStack(alignment: .leading) {
+                    Text(otpModel.issuer)
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .bold()
+                    Text(otpModel.name)
+                        .font(.system(size: 12, weight: .semibold, design: .monospaced))
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text(generateOTP(otp: otpModel, at: atDate))
+                        .font(.system(size: 18, weight: .bold, design: .monospaced))
+                        .fixedSize()
+                    
+                    Text(displayDate, style: .timer)
+                        .font(.system(size: 12, weight: .medium, design: .monospaced))
+                        .foregroundColor(.blue)
+                        .frame(width: 35)
+                }
             }
-        }
-    }
-    
-    func generateOTP(otp: OTPModel, at time: Date) -> String {
-        let period : Int = 30
-        let digits : Int = 6
-        let algorithm = "SHA1"
-        
-        let secretData = NSData(base32String: otp.secret)
-        let timeStamp = time.timeIntervalSince1970
-        let generator =  TOTPGenerator(secret: secretData as Data?, algorithm: algorithm, digits: UInt(digits), period: TimeInterval(period))
-        let code = generator?.generateOTP(for: Date.init(timeIntervalSince1970: TimeInterval(timeStamp))).separating(every: 3, separator: " ")
-        guard let codeVal = code else {
-            return "123 456"
-        }
-        return codeVal
-    }
-    
-    enum Font: String {
-        case extraBold = "NunitoSans-ExtraBold"
-        case semiBold = "NunitoSans-SemiBold"
     }
 }
+
+func generateOTP(otp: OTPModel, at time: Date) -> String {
+    let period : Int = 30
+    let digits : Int = 6
+    let algorithm = "SHA1"
+    
+    let secretData = NSData(base32String: otp.secret)
+    let timeStamp = time.timeIntervalSince1970
+    let generator =  TOTPGenerator(secret: secretData as Data?, algorithm: algorithm, digits: UInt(digits), period: TimeInterval(period))
+    let code = generator?.generateOTP(for: Date.init(timeIntervalSince1970: TimeInterval(timeStamp))).separating(every: 3, separator: " ")
+    guard let codeVal = code else {
+        return "123 456"
+    }
+    return codeVal
+}
+
+//MARK:- Empty View
+struct EmptyStateView: View {
+    var body: some View {
+        ZStack {
+            Color("WidgetBackground")
+        VStack {
+            Image("AppIcon")
+                .resizable()
+                .frame(width: 24, height: 24, alignment: .center)
+            
+            Text("Add atleast 1 OTP to display")
+        }
+        .padding()
+        }
+    }
+}
+
+
+// MARK:- Small widget
+struct SmallWidget: View {
+    let otpModel: OTPModel
+    let atDate: Date
+    let displayDate: Date
+    
+    var body: some View {
+        VStack {
+            HStack {
+                VStack(alignment: .leading, spacing: 12) {
+                    Image(uiImage: UIImage.init(named: otpModel.issuer.lowercased()) ?? UIImage(named: "shield")!)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(ContainerRelativeShape())
+                        .frame(width: 24, height: 24, alignment: .center)
+                    VStack(alignment: .leading, spacing: 4) {
+                    Text(otpModel.issuer)
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .bold()
+                    
+                    Text(otpModel.name)
+                        .font(.system(size: 12, weight: .semibold, design: .monospaced))
+                        .foregroundColor(.secondary)
+                    }
+                }
+                Spacer()
+            }
+            .padding([.leading, .top], 16)
+            Spacer()
+            HStack {
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text(generateOTP(otp: otpModel, at: atDate))
+                        .font(.system(size: 18, weight: .bold, design: .monospaced))
+                        .fixedSize()
+                    
+                    Text(displayDate, style: .timer)
+                        .font(.system(size: 12, weight: .medium, design: .monospaced))
+                        .foregroundColor(.blue)
+                        .frame(width: 35)
+                }
+            }
+            .padding([.bottom, .trailing], 16)
+            
+        }
+        .clipShape(ContainerRelativeShape())
+    }
+}
+
+
 
 // MARK:- Widgets
 struct OAWidget: Widget {
@@ -194,7 +262,7 @@ struct OAWidget: Widget {
         }
         .configurationDisplayName("OneAuth OTPs")
         .description("Quick access to your OneAuth OTP Authenticator")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
@@ -211,7 +279,7 @@ struct WidgetView: View {
     let otpModelArr: [OTPModel]
     
     var body: some View {
-        Text("Hello, World!")
+        OAWidgetView(entry: .init(date: Date(), displayDate: Calendar.current.date(byAdding: .second, value: 30, to: Date())!, otps: otpModelArr))
     }
 }
 
@@ -220,12 +288,19 @@ struct WidgetView_Previews: PreviewProvider {
         Group {
             WidgetView(
                 otpModelArr: [
-                    OTPModel(issuer: "Google", name: "emma@gmail.com", secret: "Google"),
+                    OTPModel(issuer: "Demo", name: "emma@gmail.com", secret: "Google"),
                     OTPModel(issuer: "Facebook", name: "alex@facebook.com", secret: "Facebook"),
                     OTPModel(issuer: "Apple", name: "jeeva@apple.com", secret: "Apple")
                     ]
             )
             .previewContext(WidgetPreviewContext(family: .systemMedium))
+            
+            WidgetView(
+                otpModelArr: [
+                   
+                    ]
+            )
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
         
     }

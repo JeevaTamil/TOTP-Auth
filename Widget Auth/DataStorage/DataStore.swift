@@ -9,72 +9,102 @@ import Foundation
 import Combine
 
 class DataStore: ObservableObject {
-    @Published var otps: [OTPModel] = []
-    @Published var appError: OTPErrorType? = nil
-    
+    var otps = CurrentValueSubject<[OTPModel], Never>([])
+    var appError = CurrentValueSubject<OTPErrorType?, Never>(nil)
     var addOTP = PassthroughSubject<OTPModel, Never>()
     var updateOTP = PassthroughSubject<OTPModel, Never>()
     var deleteOTP = PassthroughSubject<IndexSet, Never>()
     
-    var subscriptions = Set<AnyCancellable>()
+    var loadOTPs = UserDefaults.shared
     
+    var subscriptions = Set<AnyCancellable>()
     init() {
         addSubscriptions()
-        loadOTPs() 
     }
     
-    // Mark:- Add Subscription
+    //Mark:- Add Subscription
     func addSubscriptions() {
+        loadOTPs
+            .publisher(for: \.otpData)
+            .compactMap{ $0 }
+            .decode(type: [OTPModel].self, decoder: JSONDecoder())
+            .subscribe(on: DispatchQueue(label: "bg"))
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self]  complition in
+                switch complition {
+                case .finished:
+                    print("decoding completed")
+                    otpsSubscription()
+                case .failure(_):
+                    appError.send(OTPErrorType(error: OTPError.decodingError))
+                    print("error happened")
+                    otpsSubscription()
+                }
+            } receiveValue: { [unowned self] otps in
+                self.objectWillChange.send()
+                self.otps.value = otps
+                print("otps assigned")
+                otpsSubscription()
+            }
+            .store(in: &subscriptions)
+        
+      
         addOTP
             .sink { [unowned self] otp in
-                otps.append(otp)
-                saveOTPs()
+                self.objectWillChange.send()
+                otps.value.append(otp)
             }
             .store(in: &subscriptions)
         
         updateOTP
             .sink { [unowned self] otp in
-                guard let index = otps.firstIndex(where: { $0.id == otp.id }) else { return }
-                otps[index] = otp
-                saveOTPs()
+                guard let index = otps.value.firstIndex(where: { $0.id == otp.id }) else { return }
+                self.objectWillChange.send()
+                otps.value[index] = otp
             }
             .store(in: &subscriptions)
         deleteOTP
             .sink { [unowned self] indexSet in
-                otps.remove(atOffsets: indexSet)
-                saveOTPs()
+                self.objectWillChange.send()
+                otps.value.remove(atOffsets: indexSet)
             }
             .store(in: &subscriptions)
     }
     
-    //MARK:- Load OTP
-    func loadOTPs() {
-        PersistenceManager().loadOTPs { (result) in
-            switch result {
-            case .success(let data):
-                let decoder = JSONDecoder()
-                do {
-                    otps = try decoder.decode([OTPModel].self, from: data)
-                } catch {
-                    print(OTPError.decodingError.localizedDescription)
-                    appError = OTPErrorType(error: .decodingError)
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
+    func otpsSubscription() {
+        otps
+            .subscribe(on: DispatchQueue(label: "bg"))
+            .receive(on: DispatchQueue.main)
+            .dropFirst()
+            .encode(encoder: JSONEncoder())
+            .tryMap { data in
+                PersistenceManager().saveOTPs(data)
             }
-        }
+            .sink { complition in
+                switch complition {
+                case .finished:
+                    print("Saving completed")
+                case .failure(_):
+                    self.appError.send(OTPErrorType(error: OTPError.encodingError))
+                }
+            } receiveValue: { _ in
+                print("Saved")
+            }
+            .store(in: &subscriptions)
+    }
+}
+
+extension UserDefaults {
+    static var shared: UserDefaults {
+        return UserDefaults(suiteName: "group.com.jeeva.widgetauth")!
     }
     
-    //MARK:- Save OTP array
-    func saveOTPs() {
-        let encoder = JSONEncoder()
-        do {
-            let data = try encoder.encode(otps)
-            PersistenceManager().saveOTPs(data)
-        } catch {
-            print(OTPError.encodingError.localizedDescription)
-            appError = OTPErrorType(error: .encodingError)
+    @objc dynamic var otpData: Data? {
+        get {
+            return data(forKey: "oa_otp_secrets")
+        }
+        set {
+            setValue(newValue, forKey: "oa_otp_secrets")
         }
     }
-    
 }

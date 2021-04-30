@@ -15,8 +15,6 @@
 		A81377D5261C3919003D8920 /* OAScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81377D4261C3919003D8920 /* OAScanQRView.swift */; };
 		A813E4822637D9470041C781 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4812637D9470041C781 /* PersistenceManager.swift */; };
 		A813E49A2637FA440041C781 /* OTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4992637FA440041C781 /* OTPError.swift */; };
-		A813E4A0263812F60041C781 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E49F263812F60041C781 /* Facebook.swift */; };
-		A813E4A8263814760041C781 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813E4A7263814760041C781 /* Google.swift */; };
 		A813E4B026381E0D0041C781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324225469AB1005E7553 /* Assets.xcassets */; };
 		A813E4B726381E140041C781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A899324225469AB1005E7553 /* Assets.xcassets */; };
 		A827C63E2616676B00CEE523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A877438D2547228C00D30DFB /* Assets.xcassets */; };
@@ -103,8 +101,6 @@
 		A81377D4261C3919003D8920 /* OAScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAScanQRView.swift; sourceTree = "<group>"; };
 		A813E4812637D9470041C781 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		A813E4992637FA440041C781 /* OTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPError.swift; sourceTree = "<group>"; };
-		A813E49F263812F60041C781 /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
-		A813E4A7263814760041C781 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
 		A8509DCC25481FF500DFBF42 /* OTPIntentExtn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPIntentExtn.entitlements; sourceTree = "<group>"; };
 		A853C28F26368CAA00BF626C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		A853C29A2636AE5300BF626C /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
@@ -184,15 +180,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		A813E49E263812E10041C781 /* SocialIconPaths */ = {
-			isa = PBXGroup;
-			children = (
-				A813E49F263812F60041C781 /* Facebook.swift */,
-				A813E4A7263814760041C781 /* Google.swift */,
-			);
-			path = SocialIconPaths;
-			sourceTree = "<group>";
-		};
 		A853C28E26368C9800BF626C /* DataStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,7 +250,6 @@
 		A899323D25469AB0005E7553 /* Widget Auth */ = {
 			isa = PBXGroup;
 			children = (
-				A813E49E263812E10041C781 /* SocialIconPaths */,
 				A813E4802637D9140041C781 /* Utils */,
 				A853C28E26368C9800BF626C /* DataStorage */,
 				A8F54700262DB20E001AAE4A /* Font */,
@@ -538,11 +524,9 @@
 				A853C29B2636AE5300BF626C /* ModelType.swift in Sources */,
 				A8509DC82548178200DFBF42 /* SelectOTPIntent.intentdefinition in Sources */,
 				A81377BA261C22E8003D8920 /* CodeScanner.swift in Sources */,
-				A813E4A8263814760041C781 /* Google.swift in Sources */,
 				A87743D42547302400D30DFB /* OTPGenerator.m in Sources */,
 				A87743D62547302400D30DFB /* TOTPGenerator.m in Sources */,
 				A81377D0261C3743003D8920 /* OTPFormViewModel.swift in Sources */,
-				A813E4A0263812F60041C781 /* Facebook.swift in Sources */,
 				A899324125469AB0005E7553 /* ContentView.swift in Sources */,
 				A899326E2546A350005E7553 /* KeychainItemAccessibility.swift in Sources */,
 				A81377D5261C3919003D8920 /* OAScanQRView.swift in Sources */,
