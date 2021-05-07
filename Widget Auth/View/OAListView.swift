@@ -18,9 +18,13 @@ struct OAListView: View {
                 List {
                     ForEach (dataStore.otps.value) { otp in
                         SingleOTPView(otp: otp, isToastPresented: $isToastPresented)
-                            .onLongPressGesture {
-                                modelType = .update(otp)
-                            }
+                            .contextMenu(ContextMenu(menuItems: {
+                                Button(action: {
+                                    modelType = .update(otp)
+                                }, label: {
+                                    Label("Edit", systemImage: "square.and.pencil")
+                                })
+                            }))
                     }
                     .onDelete(perform: dataStore.deleteOTP.send)
                 }
