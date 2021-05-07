@@ -27,6 +27,7 @@ struct OAListView: View {
                             }))
                     }
                     .onDelete(perform: dataStore.deleteOTP.send)
+                    //Jev@8754712191
                 }
                 .listStyle(InsetGroupedListStyle())
             }
